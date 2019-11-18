@@ -16,6 +16,10 @@ class StatuesController < ApplicationController
     @statue = Statue.new
   end
 
+  private
 
+  def statues_params
+    params.require(:statue).permit(:name, :description, :surface, :price, :category, :photo)
+  end
 
 end
