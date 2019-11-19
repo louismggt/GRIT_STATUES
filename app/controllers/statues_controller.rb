@@ -13,7 +13,32 @@ class StatuesController < ApplicationController
 
   def create
     @statue = Statue.new(statues_params)
+    if @statue.save
+      redirect_to statue_path(@statue)
+    else
+      render :new
+    end
+  end
 
+  def edit
+    @statue = Statue.find(params[:id])
+  end
+
+  def update
+    @statue = Statue.find(params[:id])
+    @statue.update(statues_params)
+
+    if @statue.save
+      redirect_to statue_path(@statue)
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @statue = Statue.find(params[:id])
+    @statue.destroy
+    redirect_to user_path
   end
 
   private
