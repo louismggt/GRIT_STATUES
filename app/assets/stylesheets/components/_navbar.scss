@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #F4F4F4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,7 +8,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 70px;
 }
 
 .navbar-opacity {
@@ -16,7 +16,6 @@
   background: white;
   border-color: purple;
   transition: background 0.3s ease;
-
 }
 
 .navbar-lewagon .fa-lightbulb {
@@ -26,5 +25,37 @@
   background-color: lightgreen;
   padding: 7px;
   border-radius: 100%;
-  margin-left: -243px;
+  margin-left: 25px;
 }
+.nav-item {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 26px;
+  color: #60247C;
+  margin-top: 16px;
+  letter-spacing: 5px;
+  font-family: Alata, sans-serif;
+}
+.search-form-control .btn {
+  position: absolute;
+  top: 10 px;
+  bottom: 8px;
+  right: 8px;
+}
+.search-form-control {
+  position: relative;
+}
+.search-form-control .form-control {
+  border-radius: 50px;
+  width: 20vw;
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+
+
+
+
