@@ -59,3 +59,36 @@
 .card-trip .btn-ghost {
   position: absolute;
 }
+
+.show-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: lightgrey;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 5px 8px 7px 0px rgba(0,0,0,0.2);
+}
+
+.show-card > ul {
+  list-style:none;
+}
+
+.show-card > img {
+  border-radius: 50%;
+}
+
+.show-card > p {
+  border-radius: 50%;
+}
+
+.show-card > h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-family: Alata, sans-serif;
+  text-align: center;
+  color: mediumaquamarine;
+}
+
+

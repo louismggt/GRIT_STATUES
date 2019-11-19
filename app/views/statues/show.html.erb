@@ -1,14 +1,29 @@
-<div class="row justify-content-center">
+<div class="container">
   <div class="show-card">
-  <h1> <%= @statue.name %></h1>
-  <ul>
-    <%= cl_image_tag @statue.photo, height: 300, width: 400, crop: :fill %>
-      <li>
-        <%= @statue.name + ' - ' + @statue.description %>
-      </li>
-  </ul>
+    <h1> <%= @statue.name.upcase %></h1>
+    <h3><%= @statue.category %></h3>
+    <ul>
+      <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
+        <li>
+          <%= @statue.description.capitalize %><br>
+          <p><%= 'Localisation :' + ' ' + @statue.location %></p>
+        </li>
+    </ul>
   </div>
 </div>
+
+<!--
+name: "Nain Portant",
+  user: julie ,
+  category: CATEGORIES.sample,
+  surface: 15,
+  description:  "entrée de gamme",
+  price: 5,
+  material: MATERIALS.sample,
+  length: 5,
+  width: 10,
+  height: 15,
+  location: "Paris" -->
 
 
 
