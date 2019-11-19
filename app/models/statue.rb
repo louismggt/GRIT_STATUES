@@ -4,11 +4,15 @@ class Statue < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :rentals, dependent: :destroy
 
+  mount_uploader :photo, PhotoUploader
+
   validates :name, presence: true
   validates :price, presence: true
   validates :category, presence: true
   validates :surface, presence: true
   validates :description, presence: true
+
+
   validates :material, presence: true
   validates :length, presence: true
   validates :width, presence: true
