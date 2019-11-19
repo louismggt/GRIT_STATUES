@@ -4,7 +4,7 @@ background-size: cover;
 }
 
 .container-form {
-  max-width: 450px;
+  max-width: 500px;
   background: #FAFAFA;
   padding: 30px;
   margin: 50px auto;
@@ -32,3 +32,25 @@ background-size: cover;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
+// .container-form .flash {
+//   padding: 16px 24px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   background: white;
+//   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+//   border-radius: 4px;
+//   margin: 8px;
+// }
+
+// .container-form .flash-success {
+//   border: 2px solid #1EDD88;
+// }
+
+// .container-form .flash-warning {
+//   border: 2px solid #FFC65A;
+// }
+
+// .container-form .flash-danger {
+//   border: 2px solid #FD1015;
+// }
