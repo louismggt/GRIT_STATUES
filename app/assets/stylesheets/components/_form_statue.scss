@@ -1,0 +1,34 @@
+.cover {
+background-image: url("http://www.musee-rodin.fr/sites/musee/files/styles/activites_fiche/public/activite/s.1155_numhl007.jpg?itok=HCm5F3r_");
+background-size: cover;
+}
+
+.container-form {
+  max-width: 450px;
+  background: #FAFAFA;
+  padding: 30px;
+  margin: 50px auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  border: 1px solid aquamarine;
+}
+
+.container-form h1 {
+  text-align: center;
+  color: #323232;
+}
+
+.container-form .btn-ghost {
+  color: #323232;
+  border: 2px solid aquamarine;
+  background-color: aquamarine;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
