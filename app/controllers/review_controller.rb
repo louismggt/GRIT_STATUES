@@ -1,5 +1,9 @@
 class ReviewController < ApplicationController
 
+  def index
+    @reviews = Review.all(params[:statue_id])
+  end
+
   def new
     @statue = Statue.find(params[:statue_id])
     @review = Review.new
@@ -8,7 +12,6 @@ class ReviewController < ApplicationController
   def create
     @statue = Statue.find(params[:statue_id])
     @review = Review.new(review_params)
-
     if @review.save
       redirect_to statue_reviews_path(@statue)
     else
@@ -23,7 +26,6 @@ class ReviewController < ApplicationController
   def update
     @review = Review.find(params[:id])
     @review.update(review_params)
-
     if @review.save
       redirect_to statue_reviews_path(@statue)
     else
@@ -41,5 +43,4 @@ class ReviewController < ApplicationController
   def review_params
     params.require(:review).permit(:content, :stars)
   end
-
 end

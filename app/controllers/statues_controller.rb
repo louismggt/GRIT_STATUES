@@ -39,6 +39,7 @@ class StatuesController < ApplicationController
   def destroy
     @statue = Statue.find(params[:id])
     @statue.destroy
+    redirect_to user_path
   end
 
   private
@@ -46,5 +47,4 @@ class StatuesController < ApplicationController
   def statues_params
     params.require(:statue).permit(:name, :description, :surface, :price, :category, :photo)
   end
-
 end
