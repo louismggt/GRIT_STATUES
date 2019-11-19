@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_125556) do
+ActiveRecord::Schema.define(version: 2019_11_19_140616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2019_11_19_125556) do
     t.text "content"
     t.integer "stars"
     t.bigint "user_id"
-    t.bigint "statues_id"
+    t.bigint "statue_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["statues_id"], name: "index_reviews_on_statues_id"
+    t.index ["statue_id"], name: "index_reviews_on_statue_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_125556) do
     t.integer "height"
     t.integer "weight"
     t.string "material"
+    t.string "location"
     t.index ["user_id"], name: "index_statues_on_user_id"
   end
 
@@ -69,7 +70,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_125556) do
 
   add_foreign_key "rentals", "statues"
   add_foreign_key "rentals", "users"
-  add_foreign_key "reviews", "statues", column: "statues_id"
+  add_foreign_key "reviews", "statues"
   add_foreign_key "reviews", "users"
   add_foreign_key "statues", "users"
 end
