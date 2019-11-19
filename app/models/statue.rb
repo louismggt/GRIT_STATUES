@@ -9,4 +9,8 @@ class Statue < ApplicationRecord
   validates :category, presence: true
   validates :surface, presence: true
   validates :description, presence: true
+  validates :material, presence: true
+  validates :length, presence: true
+  validates :width, presence: true
+  validates :height, presence: true
 end
