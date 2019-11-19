@@ -68,6 +68,7 @@ lalique.save!
 # sculpture_de_julie = Statue.create!(name: "sculpture_de_julie",user: olivier, category: CATEGORIES.sample, surface: 164, description: "entrée de gamme ", price: 1, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
 # tour_eiffel = Statue.create!(name: "tour_eiffel",user: valentin, category: CATEGORIES.sample, surface: 250 , description: "haut de gamme ", price: 200, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
 
+
 Review.create!(content:"Amazing product, recommend", stars: 4, user: julie, statue: nain_de_merde)
 Review.create!(content:"Good product!", stars: 3, user: martin, statue: lalique)
 Review.create!(content:"Sculpture of quality", stars: 3, user: louis, statue: aphrodite)
