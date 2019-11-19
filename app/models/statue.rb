@@ -9,4 +9,5 @@ class Statue < ApplicationRecord
   validates :category, presence: true
   validates :surface, presence: true
   validates :description, presence: true
+  mount_uploader :photo, PhotoUploader
 end
