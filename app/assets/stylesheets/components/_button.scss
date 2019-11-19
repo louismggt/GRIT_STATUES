@@ -40,3 +40,74 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-greyscale {
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 3px 6px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.btn-greyscale:hover {
+  border-radius: 10px;
+  padding: 3px 6px;
+  color: white;
+  text-transform: uppercase;
+  background: mediumpurple;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.btn-green-ghost {
+  color: #212529;
+  background-color: #1EDD88;
+  padding: 4px 6px;
+  border-radius: 25px;
+  border-color: #1EDD88;
+  font-weight: lighter;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  text-decoration:none;
+  text-transform:uppercase;
+  margin-left: 10px;
+}
+
+.btn-green-ghost:hover {
+  opacity: 1;
+  color: purple;
+  text-decoration:none
+}
+
+.btn-details {
+  color: white;
+  background-color: #1EDD88;
+  border-color: #1EDD88;
+}
+
+.btn-details:hover {
+  color: white;
+  background-color: #7af9c0;
+  border-color: #1EDD88;
+}
+
+.btn-success-nav {
+  background-color: #b48ee5;
+  border-color: #1EDD88;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-success-nav:hover {
+  background-color: #1EDD88;
+  border-color: #1EDD88;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: purple;
+}

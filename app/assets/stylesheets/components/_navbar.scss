@@ -10,3 +10,11 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-opacity {
+  justify-content: space-between;
+  background: white;
+  border-color: purple;
+  transition: background 0.3s ease;
+
+}
