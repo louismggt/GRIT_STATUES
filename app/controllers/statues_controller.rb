@@ -29,7 +29,6 @@ class StatuesController < ApplicationController
   def update
     @statue = Statue.find(params[:id])
     @statue.update(statues_params)
-
     if @statue.save
       redirect_to statue_path(@statue)
     else
@@ -39,7 +38,11 @@ class StatuesController < ApplicationController
 
   def destroy
     @statue = Statue.find(params[:id])
-    @statue.destroy
+    if @statue.destroy
+      redirect_to statues_path
+    else
+      render :edit
+    end
   end
 
   private
