@@ -1,16 +1,16 @@
 
 <div class="row justify-content-center">
-<div class="container">
-  <div class="show-card">
-    <h1> <%= @statue.name.upcase %></h1>
-    <h3><%= @statue.category %></h3>
-    <ul>
-      <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
-        <li>
-          <%= @statue.description.capitalize %><br>
-          <p><%= 'Localisation :' + ' ' + @statue.location %></p>
-        </li>
-    </ul>
+  <div class="container">
+    <div class="show-card">
+      <h1> <%= @statue.name.upcase %></h1>
+      <h3><%= @statue.category %></h3>
+      <ul>
+        <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
+          <li>
+            <%= @statue.description.capitalize %><br>
+            <p><%= 'Localisation :' + ' ' + @statue.location %></p>
+          </li>
+      </ul>
+    </div>
   </div>
 </div>
- 
