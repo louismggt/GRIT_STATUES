@@ -13,8 +13,7 @@ class StatuesController < ApplicationController
   end
 
   def create
-    @statue = Statue.new
-
+    @statue = Statue.new(statues_params)
     if @statue.save
       redirect_to statue_path(@statue)
     else
@@ -40,7 +39,6 @@ class StatuesController < ApplicationController
   def destroy
     @statue = Statue.find(params[:id])
     @statue.destroy
-
     redirect_to user_path
   end
 
@@ -49,5 +47,4 @@ class StatuesController < ApplicationController
   def statues_params
     params.require(:statue).permit(:name, :description, :surface, :price, :category, :photo)
   end
-
 end
