@@ -5,6 +5,7 @@
     <%= simple_form_for @statue do |f| %>
 
       <%= f.input :name, placeholder: 'Aphrodite', class: "input" %>
+      <%= f.input :location, placeholder: '7 rue du jardin, Lille', class: "input" %>
       <%= f.input :category, class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"] %>
       <%= f.input :length, placeholder: "cm", class: "input" %>
       <%= f.input :width, placeholder: "cm",class: "input" %>
