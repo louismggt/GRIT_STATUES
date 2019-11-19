@@ -2,10 +2,11 @@
   <img src="<%= statue.photo %>" />
   <div class="card-trip-infos">
     <div>
-      <h2><%= statue.name  %></h2>
-      <p>Short description here!</p>
+      <h2><%= statue.name.capitalize  %></h2>
+      <p><%= statue.description.capitalize %></p>
     </div>
-    <h2 class="card-trip-pricing">£ Price here</h2>
+    <h2 class="card-trip-pricing" style="font-size: 32px; color:mediumaquamarine"><%= statue.price %> €</h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <a class="btn btn-details" href="#">Détails</a>
   </div>
 </div>
