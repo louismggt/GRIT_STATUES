@@ -14,10 +14,8 @@ const buildMap = (marker) => {
 
 const addMarkersToMap = (map, marker) => {
     new mapboxgl.Marker()
-
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
-
 };
 
 const fitMapToMarkers = (map, markers) => {
@@ -30,7 +28,6 @@ const initMapbox = () => {
   if (mapElement) {
     const markers = JSON.parse(mapElement.dataset.markers);
     const map = buildMap(markers);
-
     addMarkersToMap(map, markers);
     // fitMapToMarkers(map, markers);
   }
