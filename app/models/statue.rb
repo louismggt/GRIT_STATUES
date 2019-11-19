@@ -1,8 +1,8 @@
 class Statue < ApplicationRecord
   belongs_to :user
 
-  has_many :reviews
-  has_many :rentals
+  has_many :reviews, dependent: :destroy
+  has_many :rentals, dependent: :destroy
 
   validates :name, presence: true
   validates :price, presence: true
