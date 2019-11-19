@@ -1,6 +1,7 @@
 class StatuesController < ApplicationController
   def show
     @statue = Statue.find(params[:id])
+    @markers = { lat: @statue.latitude,lng: @statue.longitude }
   end
 
   def new
@@ -9,6 +10,7 @@ class StatuesController < ApplicationController
 
   def index
     @statues = Statue.all
+
   end
 
   def create

@@ -12,9 +12,12 @@ class Statue < ApplicationRecord
   validates :surface, presence: true
   validates :description, presence: true
 
-
   validates :material, presence: true
   validates :length, presence: true
   validates :width, presence: true
   validates :height, presence: true
+  validates :location, presence: true
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
