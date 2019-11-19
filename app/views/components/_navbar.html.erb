@@ -1,4 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="fas fa-lightbulb">
+       <%= link_to root_path, class: "logo fas fa-lightbulb" do %>
+  <% end %>
+  </a>
   <%= link_to root_path, class: "navbar-brand" do %>
     <i class="fas fa-diagnoses"></i>
   <% end %>
@@ -10,10 +14,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="btn btn-success-nav" href="#">Home</a>
+        <%= button_to "Accueil", root_path, :class => "btn btn-success-nav", :method => :get %>
       </li>
       <li class="nav-item">
-        <a class="btn btn-success-nav" href="#">user.name</a>
+        <a class="btn btn-success-nav" href="#">Profil</a>
       </li>
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
