@@ -36,7 +36,11 @@ class StatuesController < ApplicationController
 
   def destroy
     @statue = Statue.find(params[:id])
-    @statue.destroy
+    if @statue.destroy
+      redirect_to statues_path
+    else
+      render :edit
+    end
   end
 
   private
