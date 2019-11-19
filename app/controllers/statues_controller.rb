@@ -44,6 +44,6 @@ class StatuesController < ApplicationController
 
   def statues_params
     params.require(:statue).permit(:name, :description, :length, :width, :height,
-                                   :weight, :material, :price, :category, :photo)
+                                   :weight, :material, :price, :category, :photo, :location)
   end
 end
