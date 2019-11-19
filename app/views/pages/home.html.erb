@@ -2,9 +2,10 @@
 
 <div class="container">
   <div class="row">
+    <% @statues = Statue.all %>
     <% @statues.each do |statue| %>
       <div class="col-xs-12 col-md-6">
-        <%= render 'components/card' %>
+        <%= render 'components/card', statue: statue %>
       </div>
     <% end %>
   </div>
