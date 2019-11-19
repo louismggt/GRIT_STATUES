@@ -1,5 +1,4 @@
 class StatuesController < ApplicationController
-
   def show
     @statue = Statue.find(params[:id])
   end
@@ -45,6 +44,6 @@ class StatuesController < ApplicationController
   private
 
   def statues_params
-    params.require(:statue).permit(:name, :description, :surface, :price, :category, :photo)
+    params.require(:statue).permit(:name, :description, :length, :width, :height, :weight, :price, :category, :photo)
   end
 end
