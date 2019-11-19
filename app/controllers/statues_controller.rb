@@ -27,7 +27,6 @@ class StatuesController < ApplicationController
   def update
     @statue = Statue.find(params[:id])
     @statue.update(statues_params)
-
     if @statue.save
       redirect_to statue_path(@statue)
     else
