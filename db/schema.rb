@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2019_11_18_170513) do
     t.text "content"
     t.integer "stars"
     t.bigint "user_id"
-    t.bigint "statue_id"
+    t.bigint "statues_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["statue_id"], name: "index_reviews_on_statue_id"
+    t.index ["statues_id"], name: "index_reviews_on_statues_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_11_18_170513) do
 
   add_foreign_key "rentals", "statues"
   add_foreign_key "rentals", "users"
-  add_foreign_key "reviews", "statues"
+  add_foreign_key "reviews", "statues", column: "statues_id"
   add_foreign_key "reviews", "users"
   add_foreign_key "statues", "users"
 end
