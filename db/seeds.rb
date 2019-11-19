@@ -8,6 +8,11 @@
 
 
 ## Feeding new DB
+Review.destroy_all
+Rental.destroy_all
+Statue.destroy_all
+User.destroy_all
+
 puts "Building new database"
 
 CATEGORIES = ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"]
@@ -24,16 +29,44 @@ remi = User.create!(email:"remsansfa@gmail.com", password: "remito", username: "
 olivier = User.create!(email:"olivmat@gmail.com", password: "olivier", username: "lifiertakclabatri")
 valentin = User.create!(email:"vavalemaire@gmail.com", password: "valentin", username: "valleroux")
 
-nain_de_merde = Statue.create!(name: "nain_de_merde",user: julie , category: CATEGORIES.sample, surface: 15, description:  "entrée de gamme", price: 5, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-lalique = Statue.create!(name: "lalique",user: martin, category: CATEGORIES.sample, surface: 40, description:  "haut de gamme ", price: 45, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-aphrodite = Statue.create!(name: "aphrodite",user: louis, category: CATEGORIES.sample, surface: 50, description:  "milieu de gamme ", price: 20, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-visage_grec = Statue.create!(name: "visage_grec",user: pierre, category: CATEGORIES.sample, surface: 70, description:  "entrée de gamme ", price: 10, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-le_cavalier = Statue.create!(name: "le_cavalier",user: martind, category: CATEGORIES.sample, surface: 77, description:  "milieu de gamme ", price: 40, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-leclair = Statue.create!(name: "leclair",user: antoine, category: CATEGORIES.sample, surface: 90, description:  "entrée de gamme ", price:  25, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-zig_zag = Statue.create!(name: "zig_zag",user: mika, category: CATEGORIES.sample, surface: 100, description: "haut de gamme ", price: 100, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-amazone = Statue.create!(name: "amazone",user: remi, category: CATEGORIES.sample, surface: 150, description: "milieu de gamme ", price: 90, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-sculpture_de_julie = Statue.create!(name: "sculpture_de_julie",user: olivier, category: CATEGORIES.sample, surface: 164, description: "entrée de gamme ", price: 1, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
-tour_eiffel = Statue.create!(name: "tour_eiffel",user: valentin, category: CATEGORIES.sample, surface: 250 , description: "haut de gamme ", price: 200, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+nain_de_merde = Statue.create!(
+  name: "nain_de_merde",
+  user: julie ,
+  category: CATEGORIES.sample,
+  surface: 15,
+  description:  "entrée de gamme",
+  price: 5,
+  material: MATERIALS.sample,
+  length: 5,
+  width: 10,
+  height: 15
+)
+nain_de_merde.remote_photo_url = "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg"
+nain_de_merde.save!
+
+lalique = Statue.create!(
+  name: "lalique",
+  user: martin,
+  category: CATEGORIES.sample,
+  surface: 40,
+  description:  "haut de gamme ",
+  price: 45,
+  material: MATERIALS.sample,
+  length: 5,
+  width: 10,
+  height: 15
+)
+lalique.remote_photo_url = "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg"
+lalique.save!
+
+# aphrodite = Statue.create!(name: "aphrodite",user: louis, category: CATEGORIES.sample, surface: 50, description:  "milieu de gamme ", price: 20, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# visage_grec = Statue.create!(name: "visage_grec",user: pierre, category: CATEGORIES.sample, surface: 70, description:  "entrée de gamme ", price: 10, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# le_cavalier = Statue.create!(name: "le_cavalier",user: martind, category: CATEGORIES.sample, surface: 77, description:  "milieu de gamme ", price: 40, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# leclair = Statue.create!(name: "leclair",user: antoine, category: CATEGORIES.sample, surface: 90, description:  "entrée de gamme ", price:  25, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# zig_zag = Statue.create!(name: "zig_zag",user: mika, category: CATEGORIES.sample, surface: 100, description: "haut de gamme ", price: 100, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# amazone = Statue.create!(name: "amazone",user: remi, category: CATEGORIES.sample, surface: 150, description: "milieu de gamme ", price: 90, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# sculpture_de_julie = Statue.create!(name: "sculpture_de_julie",user: olivier, category: CATEGORIES.sample, surface: 164, description: "entrée de gamme ", price: 1, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
+# tour_eiffel = Statue.create!(name: "tour_eiffel",user: valentin, category: CATEGORIES.sample, surface: 250 , description: "haut de gamme ", price: 200, photo: "https://cdn.mycrazystuff.com/15836/nain-de-jardin-i-m-sexy-an-i-gnome-it.jpg", material: MATERIALS.sample, length: 5, width: 10, height: 15)
 
 Review.create!(content:"Amazing product, recommend", stars: 4, user: julie, statue: nain_de_merde)
 Review.create!(content:"Good product!", stars: 3, user: martin, statue: lalique)

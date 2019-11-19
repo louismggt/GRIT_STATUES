@@ -3,11 +3,9 @@
   <h1> <%= @statue.name %></h1>
   <ul>
     <%= cl_image_tag @statue.photo, height: 300, width: 400, crop: :fill %>
-    <% @statues.each do |statue| %>
       <li>
-        <%= statue.name + ' - ' + statue.description %>
+        <%= @statue.name + ' - ' + @statue.description %>
       </li>
-    <% end %>
   </ul>
   </div>
 </div>
