@@ -4,8 +4,9 @@
     <div>
       <h2><%= link_to statue.name.capitalize, statue_path(statue.id)  %></h2>
       <p><%= statue.description.capitalize %></p>
+      <h2 class="card-trip-pricing" style="font-size: 16px; color:mediumaquamarine">Louez la pour <%= statue.price %> € / jour</h2>
+
     </div>
-    <h2 class="card-trip-pricing" style="font-size: 32px; color:mediumaquamarine"><%= statue.price %> €</h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     <%= button_to "Détails", statue_path(statue.id), :class => "btn-details", :method => :get %>
   </div>
