@@ -16,7 +16,7 @@ class StatuesController < ApplicationController
 
   def index
     if params[:search].present?
-      @statues = Statue.where("name ILIKE ?", "%#{params[:search]}%")
+      @statues = Statue.where("name || location ILIKE ?", "%#{params[:search]}%")
     else
       @statues = Statue.geocoded
     end
