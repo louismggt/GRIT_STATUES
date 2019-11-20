@@ -21,8 +21,16 @@
       <li class="nav-item dropdown">
         <%= image_tag "http://www.01humours.com/image/enfants/46.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Your profil", "#", class: "dropdown-item" %>
-          <%= link_to "Log out", "#", class: "dropdown-item" %>
+          <% if user_signed_in? %>
+
+            <%= link_to "Your profil", "#", class: "dropdown-item" %>
+            <%= link_to'Logout', destroy_user_session_path, method: :delete %>
+
+          <% else %>
+
+            <%= link_to'Login', new_user_session_path %>
+
+          <% end %>
         </div>
       </li>
     </ul>
