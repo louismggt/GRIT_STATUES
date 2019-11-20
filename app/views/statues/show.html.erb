@@ -5,7 +5,7 @@
         <li>
           <h1><i class="fas fa-star"></i><%= @statue.name.upcase %></h1>
           <h3><%= @statue.category %></h3>
-          <h2><%= @statue.price.to_s + " €"%></h2><br>
+          <h2><%= @statue.price.to_s + " €/J"%></h2><br>
           <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
           <%= '- ' + @statue.description.capitalize %><br>
           <%= '- Localisation :' + ' ' + @statue.location %><br>
@@ -13,8 +13,19 @@
           </li>
       </ul>
     </div>
+    <div>
+      <%= link_to "Retour", statues_path,
+                          :class => "btn btn-primary" %>
+      <%= link_to "Supprimer", statue_path(@statue),
+                          :class => "btn btn-warning",
+                          :data => {:confirm => "ATTENTION, vous allez supprimer toutes les données de votre statue. Êtes-vous sûr(e) ?",
+                                   :method => "delete"} %>
+    </div>
     <div class="show-card">
       <%= render 'components/map', markers: @markers %>
     </div>
   </div>
 </div>
+
+
+

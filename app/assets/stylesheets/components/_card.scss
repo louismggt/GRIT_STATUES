@@ -105,6 +105,24 @@ background: linear-gradient(to right, rgba(237,255,249,1) 0%, rgba(251,255,254,1
 
 }
 
+.card-devise {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 15px 15px;
+}
+
+.card-devise > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-filter: sepia(50%);
+}
+
 .show-card .show_img {
   width: 200px;
   height: 200px;
