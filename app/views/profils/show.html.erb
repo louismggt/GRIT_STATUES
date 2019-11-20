@@ -1,0 +1,30 @@
+<div class="container-profile d-flex justify-content-around py-4">
+  <div class="contact">
+    <div class="avatar-profile my-4 mx-4">
+      <%= image_tag "http://www.01humours.com/image/enfants/46.jpg"%>
+    </div>
+    <div class="infos-profile my-4 mx-4">
+      <h4><%= @user.username %></h4>
+      <p>📫<%=  @user.email %></p>
+      <p>📞06.37.71.29.09</p>
+    </div>
+    <div class="reviews-profile my-4 mx-4">
+      <h3>Reviews</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuptates, quae consequatur obcaecati illo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus, natus repellat, quas provident magnqhsbcjnq !</p>
+    </div>
+  </div>
+  <div class="previous-rentals-profile">
+    <h1 class="welcome-text-profile my-4 mx-4">Bonjour Julie</h1>
+    <div class="description-profile d-flex justify-content-end my-4 mx-4"><p>Member since 2015 - </p><%= link_to " Modifier le profil", "#"  %></div>
+    <h3> Your statues :</h3>
+    <div class="my-rentals-profile d-flex flex-wrap mb-3 py-4 my-4 mx-4">
+        <% @user.statues.each do |statue| %>
+          <div class="col-xs-12 col-md-6">
+            <%= render 'components/card', statue: statue %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+
