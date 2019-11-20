@@ -34,6 +34,7 @@
   border-radius: 100%;
   margin-left: 25px;
 }
+
 .nav-item {
   margin-right: 10px;
   margin-left: 10px;
@@ -42,15 +43,18 @@
   margin-top: 16px;
   font-family: Alata, sans-serif;
 }
+
 .search-form-control .btn {
   position: absolute;
   top: 10 px;
   bottom: 8px;
   right: 40px;
 }
+
 .search-form-control {
   position: relative;
 }
+
 .search-form-control .form-control {
   width: 35vw;
   height: 3.5rem;
@@ -64,4 +68,57 @@
   color: red;
 }
 
+@media screen and (max-width: 1000px) {
+  .search-form-control .btn {
+    position: absolute;
+    top: 10 px;
+    bottom: 8px;
+    right: 40px;
+  }
+
+  .search-form-control {
+    position: relative;
+  }
+
+  .search-form-control .form-control {
+    width: 65vw;
+    height: 3.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid #E7E7E7;
+    margin-top: 25px;
+    margin-right: 30px;
+  }
+
+  .navbar-lewagon .avatar-dropdown-toggle {
+    color: red;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .search-form-control .btn {
+    position: absolute;
+    top: 10 px;
+    bottom: 8px;
+    right: 40px;
+  }
+
+  .search-form-control {
+    position: relative;
+  }
+
+  .search-form-control .form-control {
+    width: 95vw;
+    height: 3.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid #E7E7E7;
+    margin-top: 25px;
+    margin-right: 30px;
+  }
+
+  .navbar-lewagon .avatar-dropdown-toggle {
+    color: red;
+  }
+
+}
 
