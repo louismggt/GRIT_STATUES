@@ -1,5 +1,4 @@
 class RentalsController < ApplicationController
-
   def show
     @rental = Rental.find(params[:id])
   end
@@ -14,7 +13,7 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rentals_params)
-    @user = User.find(params[:user_id])
+    @user = current_user
     @statue = Statue.find(params[:statue_id])
 
     @rental.user = @user
@@ -35,7 +34,6 @@ class RentalsController < ApplicationController
   private
 
   def rentals_params
-    params.require(:rental).permit(:start_date, :end_date, :description, :statue_id, :user_id)
+    params.require(:rental).permit(:start_date, :end_date, :statue_id, :user_id)
   end
-
 end

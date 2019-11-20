@@ -1,20 +1,7 @@
-<%= simple_form_for(@rental) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="row justify-content-center">
+  <div class="container p-2">
 
-  <% if @rental.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @rental.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.input :start_date, as: :date, html5: true  %>
-  <%= f.input :end_date, as: :date, html5: true  %>
-  <%= f.input :description, label: 'Leave a message to the sharer!' %>
-
-  <%= f.submit class: 'btn btn-primary' %>
-  <%= link_to 'Go back to homepage', root_path, class:'btn btn-outline-primary' %>
-<% end %>
+  <h1>Want to rent this item?</h1>
+    <%= render 'form-rental', statue: @statue %>
+  </div>
+</div>
