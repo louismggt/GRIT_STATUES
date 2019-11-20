@@ -13,7 +13,12 @@ class StatuesController < ApplicationController
   end
 
   def index
-    @statues = Statue.geocoded            # returns statues with coordinates
+    if params[:search].present?
+      @statues = Statue.where("name ILIKE ?", "%#{params[:search]}%")
+    else
+      @statues = Statue.geocoded
+    end
+    # returns statues with coordinates
     @markers = @statues.map do |statue|
       {
         lat: statue.latitude,
@@ -55,6 +60,21 @@ class StatuesController < ApplicationController
       render :edit
     end
   end
+
+  #TENTATIVE DE PIERRE DE FAIRE FONCTIONNER LA SEARCHBAR.
+
+  def search
+    if params[:search].blank?
+      redirect_to(statues_path, alert: "Empty field!") && return
+
+    else
+
+    @parameter = params[:id].downcase
+    @results = Statues.all.where("lower(name) LIKE :search", search: @parameter)
+    end
+  end
+
+  #--------------------------------------------------------------------------
 
   private
 
