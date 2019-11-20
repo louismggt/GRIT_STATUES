@@ -13,8 +13,19 @@
           </li>
       </ul>
     </div>
+    <div>
+      <%= link_to "Retour", statues_path,
+                          :class => "btn btn-primary" %>
+      <%= link_to "Supprimer", statue_path(@statue),
+                          :class => "btn btn-warning",
+                          :data => {:confirm => "ATTENTION, vous allez supprimer toutes les données de votre statue. Êtes-vous sûr(e) ?",
+                                   :method => "delete"} %>
+    </div>
     <div class="show-card">
       <%= render 'components/map', markers: @markers %>
     </div>
   </div>
 </div>
+
+
+
