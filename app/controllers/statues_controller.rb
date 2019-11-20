@@ -1,4 +1,6 @@
 class StatuesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show, :index]
+
   def show
     @statue = Statue.find(params[:id])
     @markers = [{
