@@ -9,20 +9,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li>
-        <!-- <div class="search-bar">
-          <form novalidate="novalidate=" class="simple_form search" action="/statues/search" accept-charset="UTF-8" method="get">
-            <input name="utf8" type="hidden" value="/">
-            <div class="search-form-control form-group">
-              <input type="text" class="form-control string required" name="search" id="search_query" placeholder="Recherche">
-            </div>
-          </form>
-        </div> -->
-        <%= form_tag(statues_path, :method => "get", class: 'navbar-form navbar-left') do %>
-          <div class="input-group">
-            <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
-            <div class="input-group-btn">
-              <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
-            </div>
+        <%= simple_form_for :search, url: statues_path, method: :get do |f| %>
+          <div class="search-form-control form-group">
+            <%= search_field_tag :search, params[:search], placeholder: "Que cherchez vous? Ville, style...", class: "form-control" %>
+            <button name="button" type="submit" class="btn btn-flat">
+              <i class="fas fa-search"></i> Greet Me!
+            </button>
           </div>
         <% end %>
       </li>
