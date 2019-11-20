@@ -1,7 +1,11 @@
 class StatuesController < ApplicationController
   def show
     @statue = Statue.find(params[:id])
-    @markers = { lat: @statue.latitude,lng: @statue.longitude }
+    @markers = [{
+      lat: @statue.latitude,
+      lng: @statue.longitude,
+      image_url: helpers.asset_url('pin.png')
+    }]
   end
 
   def new
@@ -9,8 +13,14 @@ class StatuesController < ApplicationController
   end
 
   def index
-    @statues = Statue.all
-
+    @statues = Statue.geocoded            # returns statues with coordinates
+    @markers = @statues.map do |statue|
+      {
+        lat: statue.latitude,
+        lng: statue.longitude,
+        image_url: helpers.asset_url('pin.png')
+      }
+    end
   end
 
   def create
