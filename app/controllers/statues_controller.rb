@@ -16,7 +16,7 @@ class StatuesController < ApplicationController
 
   def index
     if params[:search].present?
-      @statues = Statue.where("name || location ILIKE ?", "%#{params[:search]}%")
+      @statues = Statue.where("name || location || category ILIKE ?", "%#{params[:search]}%")
     else
       @statues = Statue.geocoded
     end
@@ -63,7 +63,7 @@ class StatuesController < ApplicationController
     end
   end
 
-  #TENTATIVE DE PIERRE DE FAIRE FONCTIONNER LA SEARCHBAR.
+  # TENTATIVE DE PIERRE DE FAIRE FONCTIONNER LA SEARCHBAR.
 
   def search
     if params[:search].blank?
