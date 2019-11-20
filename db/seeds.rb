@@ -47,7 +47,7 @@ nain_portant.save!
 
 lalique = Statue.create!(
   name: "Lalique",
-  user: martin,
+  user: julie,
   category: CATEGORIES.sample,
   surface: 40,
   description:  "haut de gamme ",
@@ -95,7 +95,7 @@ visage_grec.save!
 
 le_cavalier = Statue.create!(
   name: "Le cavalier",
-  user: martind,
+  user: julie,
   category: CATEGORIES.sample,
   surface: 77,
   description:  "milieu de gamme ",
@@ -127,7 +127,7 @@ leclair.save!
 
 zig_zag = Statue.create!(
   name: "Zig Zag",
-  user: mika,
+  user: julie,
   category: CATEGORIES.sample,
   surface: 100,
   description: "haut de gamme ",

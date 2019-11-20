@@ -1,0 +1,58 @@
+.container-profile {
+  height: 800px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.contact {
+  border: lightgray 1px solid;
+  width: 25%
+}
+
+.avatar-profile {
+text-align: center;
+}
+
+.avatar-profile img {
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  width: 100px;
+}
+.infos-profile {
+  border-bottom: 1px solid lightgray;
+}
+.infos-profile h4 {
+  letter-spacing: 5px;
+  font-family: Alata, sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.infos-profile p {
+  letter-spacing: 1px;
+  font-family: Alata, sans-serif;
+}
+.reviews-profile h3 {
+  font-family: Alata, sans-serif;
+  letter-spacing: 5px;
+}
+
+.reviews-profile p {
+  font-family: Alata, sans-serif;
+  text-align: justify;
+}
+.previous-rentals-profile {
+  width: 65%;
+}
+.welcome-text-profile {
+  font-family: Alata, sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.description-profile {
+  font-family: Alata, sans-serif;
+  letter-spacing: 1px;
+}
+h3 {
+  font-family: Alata, sans-serif;
+  letter-spacing: 5px;
+}
