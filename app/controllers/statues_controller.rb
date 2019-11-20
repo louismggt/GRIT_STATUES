@@ -25,7 +25,8 @@ class StatuesController < ApplicationController
 
   def create
     @statue = Statue.new(statues_params)
-    if @statue.save
+    @statue.user = current_user
+    if @statue.save!
       redirect_to statue_path(@statue)
     else
       render :new
@@ -58,7 +59,6 @@ class StatuesController < ApplicationController
   private
 
   def statues_params
-    params.require(:statue).permit(:name, :description, :length, :width, :height,
-                                   :weight, :material, :price, :category, :photo, :location)
+    params.require(:statue).permit(:name, :category, :length, :width, :height, :surface, :location, :material, :description, :price, :photo, :photo_cache)
   end
 end
