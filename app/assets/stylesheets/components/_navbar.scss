@@ -5,6 +5,12 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  justify-content: center;
+}
+
+.navbar-lewagon .navbar-collapse a {
+  text-decoration: none;
+
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -58,8 +64,5 @@
 .navbar-lewagon .avatar-dropdown-toggle {
   color: red;
 }
-
-
-
 
 
