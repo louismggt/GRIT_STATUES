@@ -18,8 +18,7 @@ class RentalsController < ApplicationController
     @rental.user   = current_user
     @rental.statue = @statue
     if @rental.save
-      # redirect_to profile_path(@user)
-      redirect_to root_path
+      redirect_to profile_path(@user)
     else
       render :new
     end

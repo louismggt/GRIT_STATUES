@@ -27,7 +27,7 @@
         <% end %>
       </li>
       <li class="nav-item dropdown">
-        <%= image_tag "http://www.01humours.com/image/enfants/46.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>f
+        <%= image_tag "http://www.01humours.com/image/enfants/46.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right pl-2" aria-labelledby="navbarDropdown">
           <% if user_signed_in? %>
             <%= link_to "Your profil", profil_path(current_user), class: "dropdown-item" %>
