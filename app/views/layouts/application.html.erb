@@ -17,15 +17,18 @@
 
 <header><%= render 'components/navbar' %></header>
   <body>
+
+
     <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="alert flash flash-warning alert-dismissible fade <%= alert.nil? ? '' : 'show' %>" role="alert"><%= alert %></p>
+
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
 
   <footer>
-      <%= render 'components/footer' %>
+      <div class="footer"> <%= render 'components/footer' %></div>
   </footer>
 
 </html>
