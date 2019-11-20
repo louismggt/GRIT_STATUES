@@ -5,6 +5,7 @@ class RentalsController < ApplicationController
 
   def new
     @rental = Rental.new
+    @statue = Statue.find(params[:statue_id])
   end
 
   def index
@@ -12,16 +13,15 @@ class RentalsController < ApplicationController
   end
 
   def create
-    @rental = Rental.new(rentals_params)
-    @user = current_user
-    @statue = Statue.find(params[:statue_id])
-
-    @rental.user = @user
+    @rental        = Rental.new(rentals_params)
+    @statue        = Statue.find(params[:statue_id])
+    @rental.user   = current_user
     @rental.statue = @statue
-
     if @rental.save
-      redirect_to user_path(@user)
-    else render :new
+      # redirect_to profile_path(@user)
+      redirect_to root_path
+    else
+      render :new
     end
   end
 
@@ -34,6 +34,6 @@ class RentalsController < ApplicationController
   private
 
   def rentals_params
-    params.require(:rental).permit(:start_date, :end_date, :statue_id, :user_id)
+    params.require(:rental).permit(:start_date, :end_date, :description)
   end
 end
