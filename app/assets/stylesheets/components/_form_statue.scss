@@ -17,8 +17,13 @@ background-size: cover;
 }
 
 .container-form h1 {
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-family: Alata, sans-serif;
   text-align: center;
-  color: #323232;
+  color: mediumaquamarine;
+  border-bottom: 1px solid aquamarine;
+  margin-bottom: 30px;
 }
 
 .container-form .btn-ghost {
@@ -32,6 +37,11 @@ background-size: cover;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
+
+.container-form .text-aera {
+  color: red;
+}
+
 // .container-form .flash {
 //   padding: 16px 24px;
 //   display: flex;

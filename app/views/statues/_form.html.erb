@@ -1,0 +1,29 @@
+<div class="cover">
+  <div class="container-form">
+    <h1> GAGNEZ DE L'ARGENT EN LOUANT VOTRE STATUE !</h1>
+
+    <%= simple_form_for @statue do |f| %>
+
+      <%= f.input :name,     label: 'Nom de la statue', placeholder: 'Aphrodite', class: "input"%>
+      <%= f.input :category, label: 'Catégorie', class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"] %>
+      <%= f.input :length,   label: 'Longueur', placeholder: "cm", class: "input" %>
+      <%= f.input :width,    label: 'largeur', placeholder: "cm",class: "input" %>
+      <%= f.input :height,   label: 'Hauteur', placeholder: "cm",class: "input" %>
+      <%= f.input :surface,  placeholder: "cm",class: "input" %>
+      <%= f.input :location, label: 'Ville', placeholder: "Paris",class: "input" %>
+      <%= f.input :material, label: 'Matière', class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"] %>
+      <%= f.text_area :description, placeholder: "Décrivez votre statue en quelques mots. Donnez envie ! 🗿", class: "text-area my-5" %>
+      <%= f.input :price,    label: 'Prix - (nos experts en art vérifieront.)' %>
+      <p>📸</p>
+      <%= f.input :photo, class: "input-poto" %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.button :submit, class: "btn-flat" %>
+    <% end %>
+    <!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+      <span><strong>Yay!</strong> 🎉 you successfully added a statue.</span>
+      <a data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
+    </div> -->
+  </div>
+</div>
