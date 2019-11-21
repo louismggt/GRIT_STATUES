@@ -47,9 +47,9 @@
     </div>
     <h3> Vos anciennes reservations :</h3>
     <div class="my-rentals-profile d-flex flex-wrap mb-3 py-4 my-4 mx-4">
-        <% @user.statues.each do |statue| %>
+        <% @user.rentals.each do |rental| %>
           <div class="col-xs-12 col-md-6">
-            <%= render 'components/card', statue: statue %>
+            <%= render 'components/card', statue: rental.statue %>
           </div>
         <% end %>
     </div>
