@@ -6,13 +6,20 @@
     <%= f.input :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
     <%= f.input :end_date,   as: :string, required: false, input_html: {id: "range_end"} %>
     <%= f.input :description, label: 'Leave a message to the sharer!' %>
-    <%= f.submit class: 'btn btn-primary' %>
-    <%= link_to 'Go back to homepage', root_path, class:'btn btn-outline-primary' %>
 
-    <div id="total-price">
-      <p>The Result is : <br>
-      <span id = "result"></span>
+    <div id="total-price" class="price d-none">
+      <p>Bookez le sur ces dates pour : <br>
+      <span id = "result"></span><span>€</span>
       </p>
     </div>
 
+<!--     <div id="total-price" class="price">
+      <div >Hi there</div>
+      <p>Bookez le sur ces dates pour : <br>
+      <span id = "result"></span><span>€</span>
+      </p>
+    </div> -->
+
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to 'Go back to homepage', root_path, class:'btn btn-outline-primary' %>
   <% end %>

@@ -15,6 +15,7 @@ class ReviewController < ApplicationController
     if @review.save
       redirect_to statue_reviews_path(@statue)
     else
+      flash[:alert] = "Something went wrong."
       render :new
     end
   end

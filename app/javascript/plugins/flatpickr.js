@@ -11,7 +11,6 @@ if (newRentalForm) {
     plugins: [new rangePlugin({ input: "#range_end"})],
     minDate: "today",
     mode: "range",
-    altInput: true,
     allowInput: true,
     dateFormat: "Y-m-d",
     "disable": rentals,

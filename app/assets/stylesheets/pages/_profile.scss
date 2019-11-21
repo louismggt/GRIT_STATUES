@@ -1,5 +1,5 @@
 .container-profile {
-  height: 800px;
+  min-height: calc(100vh - 115px);
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -10,6 +10,7 @@
 
 .avatar-profile {
 text-align: center;
+font-family: Alata, sans-serif;
 }
 
 .avatar-profile img {
@@ -18,6 +19,11 @@ text-align: center;
   border: white 1px solid;
   width: 100px;
 }
+.avatar-profile p {
+  text-decoration: none;
+  color: #393E46;
+}
+
 .infos-profile {
   border-bottom: 1px solid lightgray;
 }
@@ -34,6 +40,17 @@ text-align: center;
 .reviews-profile h3 {
   font-family: Alata, sans-serif;
   letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+.my-reviews p {
+  font-family: Alata, sans-serif;
+}
+.my-reviews i {
+  color: #f7be16;
+}
+.stars-rating {
+  color: #f7be16;
+  text-align: center;
 }
 
 .reviews-profile p {
@@ -52,7 +69,24 @@ text-align: center;
   font-family: Alata, sans-serif;
   letter-spacing: 1px;
 }
+.description-profile p {
+  text-decoration:none;
+}
+
+.link_to {
+  text-decoration: none;
+  color: #393E46;
+}
+.link_to a:hover {
+  text-decoration: none;
+  opacity: 0.3;
+  color: #393E46;
+}
 h3 {
   font-family: Alata, sans-serif;
   letter-spacing: 5px;
+}
+
+h1 h2 h3 h4 p {
+  color: #393E46;
 }
