@@ -45,6 +45,17 @@
     </div>
     </div>
     <div class="show-card col-xs-12 col-lg-6">
+      <div class="title">
+        Moyenne des avis :
+      </div>
+      <div class="stars-rating mb-5">
+        <% @statue.statue_average.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @statue.statue_average.to_i).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
+      </div>
       <div class="title">Découvrez où se cache cette statue :</div>
       <%= render 'components/map', markers: @markers %>
     </div>

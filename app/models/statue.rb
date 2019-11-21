@@ -20,4 +20,22 @@ class Statue < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
+
+  def statue_reviews
+    @statue_reviews_all = self.reviews
+  end
+
+  def statue_average
+    av_rating = 0
+    unless statue_reviews == []
+      statue_reviews.each do |review|
+        av_rating += review.stars
+      end
+      av_rating /= statue_reviews.length
+      return av_rating
+    else
+      return 0
+    end
+  end
 end
