@@ -1,19 +1,51 @@
 .cover {
-background-image: url("http://www.musee-rodin.fr/sites/musee/files/styles/activites_fiche/public/activite/s.1155_numhl007.jpg?itok=HCm5F3r_");
+background-image: url("https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/sites/regions_france3/files/styles/top_big/public/assets/images/2018/08/16/dkdkizpu4aarbwv-3803270.jpg?itok=Ltc-Izdg");
 background-size: cover;
+padding: 30px 30px;
 }
 
 .container-form {
   max-width: 500px;
   background: #FAFAFA;
-  padding: 30px;
+  padding: 30px 30px;
   margin: 50px auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 30px;
+  margin-left: 50px;
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
   border: 1px solid aquamarine;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload i
+{
+    cursor: pointer;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 650px) {
+
+  .cover {
+  background-image: url("https://france3-regions.francetvinfo.fr/provence-alpes-cote-d-azur/sites/regions_france3/files/styles/top_big/public/assets/images/2018/08/16/dkdkizpu4aarbwv-3803270.jpg?itok=Ltc-Izdg");
+  background-size: cover;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  }
+  .container-form {
+    max-width: 90vw;
+    background: #FAFAFA;
+    padding: 30px 30px;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 1px solid aquamarine;
+  }
+
 }
 
 .container-form h1 {
