@@ -8,13 +8,6 @@ class StatuesController < ApplicationController
       lng: @statue.longitude,
       image_url: helpers.asset_url('pin.png')
     }]
-    @rentals        = Rental.where(statue_id: @statue.id)
-    @rentals_dates = @rentals.map do |rental|
-      {
-        from: rental.start_date,
-        to:   rental.end_date
-      }
-    end
   end
 
   def new
