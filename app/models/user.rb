@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   def my_statues_reviews
     user_statues = self.statues
-    return user_statues.map {|statue| statue.reviews }.flatten
+    return user_statues.map { |statue| statue.reviews }.flatten
   end
 
   def avarage_rating
