@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-
+  object-fit : cover;
 }
 
 .banner h1 {
@@ -28,4 +28,15 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner h6 {
+  font-size: 16px;
+  color: white;
+  opacity: .8;
+  margin-top: 40px;
+}
+
+.banner i {
+  color: #ffd83f;
 }

@@ -31,7 +31,7 @@ valentin = User.create!(email:"vavalemaire@gmail.com",  password: "valentin", us
 
 nain_portant = Statue.create!(
   name: "Nain Portant",
-  user: julie ,
+  user: martin ,
   category: CATEGORIES.sample,
   surface: 15,
   description:  "entrée de gamme",
@@ -47,7 +47,7 @@ nain_portant.save!
 
 lalique = Statue.create!(
   name: "Lalique",
-  user: julie,
+  user: pierre,
   category: CATEGORIES.sample,
   surface: 40,
   description:  "haut de gamme ",
@@ -191,26 +191,28 @@ tour_eiffel.remote_photo_url = "https://images-na.ssl-images-amazon.com/images/I
 tour_eiffel.save!
 
 
-# Review.create!(content:"Amazing product, recommend", stars: 4, user: julie, statue: nain_portant)
-# Review.create!(content:"Good product!", stars: 3, user: martin, statue: lalique)
-# Review.create!(content:"Sculpture of quality", stars: 3, user: louis, statue: aphrodite)
-# Review.create!(content:"The sculpture worked perfectly in my exhibition", stars: 4, user: pierre, statue: visage_grec)
-# Review.create!(content:"Thanks for this work of art at an affordable price", stars: 5, user: martind, statue: le_cavalier)
-# Review.create!(content:"perfect for decorating your parade ", stars: 4, user: olivier, statue: leclair)
-# Review.create!(content:"Recommended.", stars: 3, user: valentin, statue: zig_zag)
-# Review.create!(content:"Super produit, je recommande", stars: 4, user: antoine, statue: sculpture_de_julie)
-# Review.create!(content:"calidad de mierda", stars: 2, user: mika, statue: amazone)
-# Review.create!(content:"fragile sculpture", stars: 1, user: remi, statue: tour_eiffel)
+Review.create!(content:"Amazing product, recommend", stars: 4, user: julie, statue: nain_portant)
+Review.create!(content:"Good product!", stars: 3, user: martin, statue: lalique)
+Review.create!(content:"Sculpture of quality", stars: 3, user: louis, statue: aphrodite)
+Review.create!(content:"The sculpture worked perfectly in my exhibition", stars: 4, user: pierre, statue: visage_grec)
+Review.create!(content:"Thanks for this work of art at an affordable price", stars: 5, user: martind, statue: le_cavalier)
+Review.create!(content:"perfect for decorating your parade ", stars: 4, user: olivier, statue: leclair)
+Review.create!(content:"Recommended.", stars: 3, user: valentin, statue: zig_zag)
+Review.create!(content:"Super produit, je recommande", stars: 4, user: antoine, statue: sculpture_de_julie)
+Review.create!(content:"top", stars: 4, user: remi, statue: sculpture_de_julie)
+Review.create!(content:"Génial", stars: 4, user: mika, statue: zig_zag)
+Review.create!(content:"calidad de mierda", stars: 2, user: mika, statue: amazone)
+Review.create!(content:"fragile sculpture", stars: 1, user: remi, statue: tour_eiffel)
 
-# Rental.create!(description: "Private party", start_date: Date.new(2019,10,18), end_date: Date.new(2019,10,20), user: antoine, statue: nain_portant)
-# Rental.create!(description: "fashion show", start_date: Date.new(2019,11,12), end_date: Date.new(2019,11,15), user: julie, statue: nain_portant)
-# Rental.create!(description: "Private party", start_date: Date.new(2019,12,22), end_date: Date.new(2019,1,1), user: martin, statue: nain_portant)
-# Rental.create!(description: "Birthday", start_date: Date.new(2020,1,4), end_date: Date.new(2020,1,5), user: louis, statue: nain_portant)
-# Rental.create!(description: "Showroom", start_date: Date.new(2020,6,10), end_date: Date.new(2020,6,12), user: martind, statue: nain_portant)
-# Rental.create!(description: "Birthday", start_date: Date.new(2020,7,17), end_date: Date.new(2020,7,19), user: mika, statue: nain_portant)
-# Rental.create!(description: "Showroom", start_date: Date.new(2020,4,10), end_date: Date.new(2020,4,30), user: remi, statue: nain_portant)
-# Rental.create!(description: "Private party", start_date: Date.new(2020,9,14), end_date: Date.new(2020,9,17), user: valentin, statue: nain_portant)
-# Rental.create!(description: "Showroom", start_date: Date.new(2020,4,23), end_date: Date.new(2020,4,26), user: pierre, statue: nain_portant)
-# Rental.create!(description: "Christmas event", start_date: Date.new(2019,12,1), end_date: Date.new(2020,1,1), user: olivier, statue: nain_portant)
+Rental.create!(description: "Private party", start_date: Date.new(2019,10,18), end_date: Date.new(2019,10,20), user: antoine, statue: nain_portant)
+Rental.create!(description: "fashion show", start_date: Date.new(2019,11,12), end_date: Date.new(2019,11,15), user: julie, statue: nain_portant)
+Rental.create!(description: "Private party", start_date: Date.new(2019,12,22), end_date: Date.new(2019,1,1), user: martin, statue: nain_portant)
+Rental.create!(description: "Birthday", start_date: Date.new(2020,1,4), end_date: Date.new(2020,1,5), user: louis, statue: nain_portant)
+Rental.create!(description: "Showroom", start_date: Date.new(2020,6,10), end_date: Date.new(2020,6,12), user: martind, statue: nain_portant)
+Rental.create!(description: "Birthday", start_date: Date.new(2020,7,17), end_date: Date.new(2020,7,19), user: mika, statue: nain_portant)
+Rental.create!(description: "Showroom", start_date: Date.new(2020,4,10), end_date: Date.new(2020,4,30), user: remi, statue: nain_portant)
+Rental.create!(description: "Private party", start_date: Date.new(2020,9,14), end_date: Date.new(2020,9,17), user: valentin, statue: nain_portant)
+Rental.create!(description: "Showroom", start_date: Date.new(2020,4,23), end_date: Date.new(2020,4,26), user: pierre, statue: nain_portant)
+Rental.create!(description: "Christmas event", start_date: Date.new(2019,12,1), end_date: Date.new(2020,1,1), user: olivier, statue: nain_portant)
 
 puts "Database seeded"

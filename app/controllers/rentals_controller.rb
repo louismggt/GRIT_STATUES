@@ -6,6 +6,14 @@ class RentalsController < ApplicationController
   def new
     @rental = Rental.new
     @statue = Statue.find(params[:statue_id])
+
+    @rentals = @statue.rentals
+    @rentals_dates = @rentals.map do |rental|
+      {
+        from: rental.start_date,
+        to:   rental.end_date
+      }
+    end
   end
 
   def index
@@ -18,7 +26,7 @@ class RentalsController < ApplicationController
     @rental.user   = current_user
     @rental.statue = @statue
     if @rental.save
-      redirect_to profile_path(@user)
+      redirect_to profil_path(current_user)
     else
       render :new
     end

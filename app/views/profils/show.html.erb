@@ -2,6 +2,15 @@
   <div class="contact">
     <div class="avatar-profile my-4 mx-4">
       <%= image_tag "http://www.01humours.com/image/enfants/46.jpg"%>
+      <p><%= link_to " Modifier la photo de profil", "#", class: "link_to"  %></p>
+      <div class="stars-rating">
+        <% @user.avarage_rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @user.avarage_rating.to_i).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
+      </div>
     </div>
     <div class="infos-profile my-4 mx-4">
       <h4><%= @user.username %></h4>
@@ -9,22 +18,40 @@
       <p>📞06.37.71.29.09</p>
     </div>
     <div class="reviews-profile my-4 mx-4">
-      <h3>Reviews</h3>
-      <p>Lorem ipsum dolor sit amet, consectetuptates, quae consequatur obcaecati illo.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus, natus repellat, quas provident magnqhsbcjnq !</p>
+      <h3>Avis sur vous :</h3>
+      <% @user.my_statues_reviews.each do |review| %>
+        <div class="my-reviews">
+          <div>
+            <% review.stars.to_i.times do  %>
+             <i class="fas fa-star"></i>
+            <% end %>
+            <% (5 - review.stars).times do %></%>
+             <i class="far fa-star"></i>
+            <% end %>
+          </div>
+          <p>"<%= review.content %> " by <strong><%= review.user.username %></strong></p>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="previous-rentals-profile">
     <h1 class="welcome-text-profile my-4 mx-4">Bonjour <%= @user.username %></h1>
-    <div class="description-profile d-flex justify-content-end my-4 mx-4"><p>Member since 2015 - </p><%= link_to " Modifier le profil", "#"  %></div>
-    <h3> Your statues :</h3>
-    <div class=" d-flex flex-wrap mb-3 py-4 my-4 mx-4">
-        <% @user.statues.each do |statue| %>
+    <div class="description-profile d-flex justify-content-end my-4 mx-4"><p><%= link_to " Modifier le profil", "#", class: "link_to"  %></p></div>
+    <h3> Vos annonces en ligne :</h3>
+    <div class="my-rentals-profile d-flex flex-wrap mb-3 py-4 my-4 mx-4">
+      <% @user.statues.each do |statue| %>
+        <div class="col-xs-12 col-md-6">
+          <%= render 'components/card', statue: statue %>
+        </div>
+      <% end %>
+    </div>
+    <h3> Vos anciennes reservations :</h3>
+    <div class="my-rentals-profile d-flex flex-wrap mb-3 py-4 my-4 mx-4">
+        <% @user.rentals.each do |rental| %>
           <div class="col-xs-12 col-md-6">
-            <%= render 'components/card', statue: statue %>
+            <%= render 'components/card', statue: rental.statue %>
           </div>
         <% end %>
     </div>
   </div>
 </div>
-

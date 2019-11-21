@@ -1,7 +1,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1552596828-4e48cd784320?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80);">
   <div class="container">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+
     <h1><strong>G</strong>REET <strong>S</strong>TATUES</h1>
-    <p>L'ART, ÇA SE PARTAGE !</p>
+    <p class="mb-3">L'ART, C'EST UNE AFFAIRE DE
+        <span
+           class="txt-rotate"
+           data-period="2000"
+           data-rotate='[ "PARTAGE !", "COUP DE COEUR !", "PLACE !", "DÉCO !", "GOÛT !" ]'></span>
+      </p>
     <%= button_to "METTRE MA STATUE EN LOCATION", new_statue_path, :class => "btn btn-ghost", :method => :get %>
+    <h6><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    <em>5/5 - " Les agents immobiliers n'ont qu'à bien se tenir ! "</em> - Libération</h6>
   </div>
 </div>

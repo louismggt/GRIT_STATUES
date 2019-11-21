@@ -4,18 +4,21 @@
 
     <%= simple_form_for @statue do |f| %>
 
-      <%= f.input :name, placeholder: 'Aphrodite', class: "input" %>
-      <%= f.input :category, class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"] %>
-      <%= f.input :length, placeholder: "cm", class: "input" %>
-      <%= f.input :width, placeholder: "cm",class: "input" %>
-      <%= f.input :height, placeholder: "cm",class: "input" %>
-      <%= f.input :material, class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"] %>
-      <%= f.text_area :description, placeholder: "Write a short description for your statue 🗿", class: "text-area" %>
-      <%= f.input :price %>
-      <p>📸</p><%= f.input :photo, class: "input-poto" %>
+      <%= f.input :name,     label: 'Nom de la statue', placeholder: 'Aphrodite', class: "input"%>
+      <%= f.input :category, label: 'Catégorie', class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"].sort %>
+      <%= f.input :length,   label: 'Longueur', placeholder: "cm", class: "input" %>
+      <%= f.input :width,    label: 'Largeur', placeholder: "cm",class: "input" %>
+      <%= f.input :height,   label: 'Hauteur', placeholder: "cm",class: "input" %>
+      <%= f.input :surface,  placeholder: "cm",class: "input" %>
+      <%= f.input :location, label: 'Ville', placeholder: "Paris",class: "input" %>
+      <%= f.input :material, label: 'Matière', class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"].sort %>
+      <%= f.input :description, placeholder: "Décrivez votre statue en quelques mots. Donnez envie ! 🗿", class: "text-area my-5 text-uppercase" %>
+      <%= f.input :price,    label: 'Tarif journalier - (nos experts en art vérifieront.)', input_html: { min: '0'}, placeholder: "Make it rain!" %>
+      <p>📸 </p>
+      <%= f.input :photo, label:"Une photo vaut mieux que 1000 mots!", class: "btn btn-ghost" %>
       <%= f.input :photo_cache, as: :hidden %>
-      <p class="btn-ghost"><%= f.button :submit %></p>
-      <p class="btn-ghost"><%= link_to "Delete this Statue", statue_path(@statue), method: :delete  %></p>
+      <%= f.button :submit, class: "btn-flat" %>
+      <p class="btn-delete"><%= link_to "Supprimer votre statue", statue_path(@statue), method: :delete  %></p>
     <% end %>
     <!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
       <span><strong>Yay!</strong> 🎉 you successfully added a statue.</span>

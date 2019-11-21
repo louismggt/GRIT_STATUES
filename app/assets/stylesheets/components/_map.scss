@@ -7,3 +7,29 @@
   cursor: pointer;
 }
 
+.mapboxgl-popup {
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  background-color: #F4F4F4;
+  opacity: 0.9;
+}
+
+.mapboxgl-popup-content h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: mediumaquamarine;
+}
+
+.mapboxgl-popup-content img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+
+}

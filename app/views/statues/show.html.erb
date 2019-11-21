@@ -1,30 +1,66 @@
+
 <div class="container">
   <div class="row d-flex">
-      <div class="show-card min-vw-40 flex-grow-1 mr-3">
-        <ul>
-          <li>
-            <h1><i class="fas fa-star"></i><%= @statue.name.upcase %></h1>
-            <h3><%= @statue.category %></h3>
-            <h2><%= @statue.price.to_s + " €/J"%></h2><br>
-            <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
-            <%= '- ' + @statue.description.capitalize %><br>
-            <%= '- Localisation :' + ' ' + @statue.location %><br>
-            <%= '- Matériaux :' + ' ' + @statue.material %>
-            </li>
-        </ul>
+    <div class="show-card min-vw-40 flex-grow-1 mr-3">
+      <ul>
+        <li>
+          <h1><i class="fas fa-star"></i><%= @statue.name.upcase %></h1>
+          <h3><%= @statue.category %></h3>
+          <em><%= @statue.description.capitalize %></em>
+          <h2><%= @statue.price.to_s + " €/J"%></h2><br>
+          <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
+          <div class="card-details d-flex flex-column justify-content-between">
+          <div class="item">
+            <i class="fas fa-map-marked-alt"></i><%= ' Adresse :' + ' ' + @statue.location %><br>
+          </div>
+          <div class="item">
+            <i class="fas fa-gem"></i><%= ' Matière :' + ' ' + @statue.material %><br>
+          </div>
+          <div class="item">
+            <i class="fas fa-arrows-alt-v"></i><%= ' Hauteur :' + ' ' + @statue.height.to_s + ' cm' %><br>
+          </div>
+          <div class="item">
+            <i class="fas fa-arrows-alt-h"></i><%= ' Largeur :' + ' ' + @statue.width.to_s + ' cm' %><br>
+          </div>
+          <div class="item">
+            <i class="fas fa-ruler"></i><%= ' Profondeur :' + ' ' + @statue.length.to_s + ' cm' %><br>
+          </div>
+          <div class="item">
+            <i class="fas fa-expand-arrows-alt"></i><%= ' Surface à prévoir :' + ' ' + (@statue.width * @statue.length).to_s + ' cm2' %><br>
+          </div>
+          </div>
+        </li>
+      </ul>
+    <div><i class="fas fa-heart"></i><%= link_to " JE VEUX LA LOUER !", new_statue_rental_path(@statue),
+                    :class => "btn-reservation" %>
+    </div><br>
+    <div><%= link_to "Retour", statues_path,
+                    :class => "btn-show-options" %>
+          <%= link_to "Éditer", edit_statue_path(@statue),
+                    :class => "btn-show-edit" %>
+          <%= link_to "Supprimer", statue_path(@statue),
+                    :class => "btn-show-delete",
+                    :data => {:confirm => "ATTENTION, vous allez supprimer toutes les données de votre statue. Êtes-vous sûr(e) ?",
+                             :method => "delete"} %>
+    </div>
+    </div>
+    <div class="show-card col-xs-12 col-lg-6">
+      <div class="title">
+        Moyenne des avis :
       </div>
-      <div class="show-card col-xs-12 col-lg-6">
-        <div class="title">Découvrez où se cache cette statue :</div>
-        <%= render 'components/map', markers: @markers %>
+      <div class="stars-rating mb-5">
+        <% @statue.statue_average.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @statue.statue_average.to_i).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
       </div>
+      <div class="title">Découvrez où se cache cette statue :</div>
+      <%= render 'components/map', markers: @markers %>
+    </div>
+
   </div>
 </div>
-<div>
-  <%= link_to "Retour", statues_path,
-                      :class => "btn btn-primary" %>
-  <%= link_to "Supprimer", statue_path(@statue),
-                      :class => "btn btn-warning",
-                      :data => {:confirm => "ATTENTION, vous allez supprimer toutes les données de votre statue. Êtes-vous sûr(e) ?",
-                               :method => "delete"} %>
-</div>
+
 

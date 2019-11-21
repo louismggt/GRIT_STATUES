@@ -1,0 +1,11 @@
+<div class="container-reviews ">
+  <div class="row">
+    <div class="col xs-6">
+      <%= simple_form_for [@statue, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.input :stars, collection: (1..5).to_a, label: "Note ta location" %>
+        <%= f.submit "Envoyer mon avis" %>
+      <% end %>
+    </div>
+  </div>
+</div>
