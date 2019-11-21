@@ -118,6 +118,95 @@
   color: white;
   font-weight: bold;
   margin-bottom: 30px;
+}
+
+.btn-show-options {
+  background-color: mediumaquamarine;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.btn-show-options:hover {
+  background-color: #91e0c4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-show-delete {
+  background-color: #D2B48C ;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.btn-show-delete:hover {
+  background-color: #e5cfb3 ;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
 
+.btn-show-edit {
+  background-color: #6fabc4 ;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.btn-show-edit:hover {
+  background-color: #9ED0E6 ;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-reservation {
+  font-size: 20px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: mediumaquamarine;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.btn-reservation:hover {
+  transition: 0.2s ease;
+  font-size: 21px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: #91e0c4;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.fa-heart {
+  color: red;
+  margin-right: 3px;
+  font-size : 20px;
 }

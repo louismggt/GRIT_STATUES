@@ -4,18 +4,18 @@
 
     <%= simple_form_for @statue do |f| %>
 
-      <%= f.input :name, placeholder: 'Aphrodite', class: "input" %>
-      <%= f.input :category, class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"] %>
-      <%= f.input :length, placeholder: "cm", class: "input" %>
-      <%= f.input :width, placeholder: "cm",class: "input" %>
-      <%= f.input :height, placeholder: "cm",class: "input" %>
-      <%= f.input :material, class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"] %>
-      <%= f.text_area :description, placeholder: "Write a short description for your statue 🗿", class: "text-area" %>
-      <%= f.input :price %>
+      <%= f.input :name,      label: 'Nom de la statue', placeholder: 'Aphrodite', class: "input" %>
+      <%= f.input :category,  label: 'Catégorie',   class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"] %>
+      <%= f.input :length,    label: 'Longueur', placeholder: "cm", class: "input" %>
+      <%= f.input :width,     label: 'Largeur', placeholder: "cm",class: "input" %>
+      <%= f.input :height,    label: 'Hauteur', placeholder: "cm",class: "input" %>
+      <%= f.input :material,  label: 'Matière', class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"] %>
+      <%= f.text_area :description, placeholder: "Write a short description for your statue 🗿", class: "text-area text-capitalize text-break" %>
+      <%= f.input :price,     label: 'Prix' %>
       <p>📸</p><%= f.input :photo, class: "input-poto" %>
       <%= f.input :photo_cache, as: :hidden %>
       <p class="btn-ghost"><%= f.button :submit %></p>
-      <p class="btn-ghost"><%= link_to "Delete this Statue", statue_path(@statue), method: :delete  %></p>
+      <p class="btn-ghost"><%= link_to "Supprimer votre statue", statue_path(@statue), method: :delete  %></p>
     <% end %>
     <!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
       <span><strong>Yay!</strong> 🎉 you successfully added a statue.</span>
