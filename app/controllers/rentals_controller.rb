@@ -2,18 +2,19 @@ class RentalsController < ApplicationController
   def show
     @rental = Rental.find(params[:id])
 
-    @rentals        = Rental.where(statue_id: @statue.id)
+  end
+
+  def new
+    @rental = Rental.new
+    @statue = Statue.find(params[:statue_id])
+
+    @rentals = @statue.rentals
     @rentals_dates = @rentals.map do |rental|
       {
         from: rental.start_date,
         to:   rental.end_date
       }
     end
-  end
-
-  def new
-    @rental = Rental.new
-    @statue = Statue.find(params[:statue_id])
   end
 
   def index
