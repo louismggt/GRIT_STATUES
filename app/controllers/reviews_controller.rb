@@ -1,19 +1,21 @@
 class ReviewsController < ApplicationController
 
-  def index
-    @reviews = Review.all(params[:statue_id])
-  end
+  # def index
+  #   @reviews = Review.all
+  # end
 
   def new
-    # @statue = Statue.find(params[:statue_id])
+    @statue = Statue.find(params[:statue_id])
     @review = Review.new
   end
 
   def create
     @statue = Statue.find(params[:statue_id])
     @review = Review.new(review_params)
+    @review.user = current_user
+    @review.statue = @statue
     if @review.save
-      redirect_to statue_reviews_path(@statue)
+      redirect_to root_path
     else
       flash[:alert] = "Something went wrong."
       render :new
