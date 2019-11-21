@@ -1,11 +1,11 @@
-class ReviewController < ApplicationController
+class ReviewsController < ApplicationController
 
   def index
     @reviews = Review.all(params[:statue_id])
   end
 
   def new
-    @statue = Statue.find(params[:statue_id])
+    # @statue = Statue.find(params[:statue_id])
     @review = Review.new
   end
 
