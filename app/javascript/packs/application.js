@@ -4,11 +4,10 @@ import "../plugins/flatpickr"
 import "../plugins/price_calculator"
 
 import { initStarRating } from '../plugins/init_star_rating';
-
-
 import { initMapbox } from '../plugins/init_mapbox';
 
+initMapbox();
 initStarRating();
 
-initMapbox();
+
 
