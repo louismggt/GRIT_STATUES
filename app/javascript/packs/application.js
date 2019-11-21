@@ -6,3 +6,4 @@ import "../plugins/price_calculator"
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
+
