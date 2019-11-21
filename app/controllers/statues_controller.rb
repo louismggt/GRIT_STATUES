@@ -8,6 +8,13 @@ class StatuesController < ApplicationController
       lng: @statue.longitude,
       image_url: helpers.asset_url('pin.png')
     }]
+    @rentals        = Rental.where(statue_id: @statue.id)
+    @rentals_dates = @rentals.map do |rental|
+      {
+        from: rental.start_date,
+        to:   rental.end_date
+      }
+    end
   end
 
   def new
@@ -16,6 +23,8 @@ class StatuesController < ApplicationController
 
   def index
     if params[:search].present?
+      # ILIKE ==> Insensible a la casse
+      # LIKE ==> Sensible a la casse
       @statues = Statue.where("name || location || category ILIKE ?", "%#{params[:search]}%")
     else
       @statues = Statue.geocoded
