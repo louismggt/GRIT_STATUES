@@ -110,7 +110,7 @@ background: linear-gradient(to right, rgba(237,255,249,1) 0%, rgba(251,255,254,1
   margin-bottom: 5px;
 }
 
-.show-card .price[data-showme] {
+.show-card .price{
   font-size: 20px;
   letter-spacing: 2px;
   font-family: Alata, sans-serif;
@@ -118,17 +118,9 @@ background: linear-gradient(to right, rgba(237,255,249,1) 0%, rgba(251,255,254,1
   color: mediumaquamarine;
   border-bottom: 1px solid aquamarine;
   margin-bottom: 10px;
-  display: none;
 }
 
-.show-card .price[data-showme='true'] {
-  font-size: 20px;
-  letter-spacing: 2px;
-  font-family: Alata, sans-serif;
-  text-align: center;
-  color: mediumaquamarine;
-  border-bottom: 1px solid aquamarine;
-  margin-bottom: 10px;
+.show-card .show-price {
   display: block;
 }
 

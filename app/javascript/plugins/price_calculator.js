@@ -1,5 +1,5 @@
 const priceUpdate = document.getElementById("range_start");
-
+const element = document.getElementById("result")
 console.log("toto")
 
 priceUpdate.addEventListener("change", event => {
@@ -10,6 +10,12 @@ priceUpdate.addEventListener("change", event => {
     console.log("endDate:", endDate);
     console.log("pricePerDay:", pricePerDay);
 
-    document.getElementById("result").innerHTML = ((Date.parse(endDate) - Date.parse(startDate)) * pricePerDay) / 86400000 ;
+    const price = ((Date.parse(endDate) - Date.parse(startDate)) * pricePerDay) / 86400000;
+    element.innerHTML = price;
+
+    if (!isNaN(price)) {
+      const totalPrice = document.getElementById('total-price')
+      totalPrice.classList.remove("d-none");
+    }
   }
 )
