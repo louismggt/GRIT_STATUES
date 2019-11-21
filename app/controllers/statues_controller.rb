@@ -18,7 +18,7 @@ class StatuesController < ApplicationController
     if params[:search].present?
       # ILIKE ==> Insensible a la casse
       # LIKE ==> Sensible a la casse
-      @statues = Statue.where("name || location || category ILIKE ?", "%#{params[:search]}%")
+      @statues = Statue.where("name || location || material || category ILIKE ?", "%#{params[:search]}%")
     else
       @statues = Statue.geocoded
     end
@@ -27,7 +27,8 @@ class StatuesController < ApplicationController
       {
         lat: statue.latitude,
         lng: statue.longitude,
-        image_url: helpers.asset_url('pin2.png')
+        image_url: helpers.asset_url('pin2.png'),
+        infoWindow: render_to_string(partial: "info_window", locals: { statue: statue })
       }
     end
   end
