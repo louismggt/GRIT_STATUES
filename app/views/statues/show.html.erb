@@ -8,7 +8,7 @@
           <h3><%= @statue.category %></h3>
           <em><%= @statue.description.capitalize %></em>
           <h2><%= @statue.price.to_s + " €/J"%></h2><br>
-          <%= cl_image_tag @statue.photo, :class => "show_img", height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @statue.photo, :class => "show_img mt-3", height: 300, width: 400, crop: :fill %>
           <%= '- Localisation :' + ' ' + @statue.location %><br>
           <%= '- Matière :' + ' ' + @statue.material %><br>
           <%= '- Hauteur :' + ' ' + @statue.height.to_s + ' cm' %><br>
