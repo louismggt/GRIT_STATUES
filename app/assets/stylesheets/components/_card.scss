@@ -120,6 +120,16 @@ background: linear-gradient(to right, rgba(237,255,249,1) 0%, rgba(251,255,254,1
   margin-bottom: 10px;
 }
 
+.show-card .item {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: mediumaquamarine;
+  padding-top: 5px;
+  border-top: 1px solid aquamarine;
+  margin-bottom: 20px;
+}
+
 .show-card .show-price {
   display: block;
 }
