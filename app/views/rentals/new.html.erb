@@ -1,10 +1,12 @@
-
-<div class="row justify-content-center">
-  <div class="container p-2">
-
-    <h1>Want to rent this item?</h1>
-
+<div class="container">
+  <div class="row d-flex">
+    <div class="show-card col-lg-6 mr-3">
+    <h2>Bookez <%= @statue.name %> avant qu'il ne soit trop tard!</h2>
       <%= render 'form-rental' %>
-
+    </div>
+    <div class="show-card col-xs-12 col-lg-5">
+      <div class="title mb-3"><%= @statue.name %> vous attend!</div>
+      <%= cl_image_tag @statue.photo, class: 'show_img_rental' %>
+    </div>
   </div>
 </div>
