@@ -15,18 +15,17 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
 
-<header><%= render 'components/navbar' %></header>
   <body>
+    <header><%= render 'components/navbar' %></header>
     <p class="notice"><%= notice %></p>
     <p class="alert flash flash-warning alert-dismissible fade <%= alert.nil? ? '' : 'show' %>" role="alert"><%= alert %></p>
 
     <%= yield %>
+        <div class="footer"><%= render 'components/footer' %></div>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
 
-  <footer>
-      <div class="footer"><%= render 'components/footer' %></div>
-  </footer>
 
 </html>

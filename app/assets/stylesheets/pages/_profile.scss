@@ -1,7 +1,8 @@
 .container-profile {
-  height: 800px;
+  // height: 800px;
   margin-left: 40px;
   margin-right: 40px;
+  min-height: calc(100vh - 115px);
 }
 .contact {
   border: lightgray 1px solid;
