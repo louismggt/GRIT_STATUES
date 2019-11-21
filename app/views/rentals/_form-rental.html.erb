@@ -1,4 +1,6 @@
 
+<div id="new_rental" data-rentals="<%= @rentals_dates.to_json %>"
+></div>
 
   <%= simple_form_for [@statue, @rental] do |f| %>
     <%= f.input :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
@@ -7,4 +9,3 @@
     <%= f.submit class: 'btn btn-primary' %>
     <%= link_to 'Go back to homepage', root_path, class:'btn btn-outline-primary' %>
   <% end %>
-

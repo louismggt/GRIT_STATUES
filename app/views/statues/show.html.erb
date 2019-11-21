@@ -16,23 +16,22 @@
           <%= '- Surface à prévoir :' + ' ' + @statue.surface.to_s + ' cm2' %><br>
         </li>
       </ul>
-      <div><i class="fas fa-heart"></i><%= link_to " JE VEUX LA LOUER !", new_statue_rental_path(@statue),
-                      :class => "btn-reservation" %>
-      </div><br>
-      <div><%= link_to "Retour", statues_path,
-                      :class => "btn-show-options" %>
-            <%= link_to "Éditer", edit_statue_path(@statue),
-                      :class => "btn-show-edit" %>
-            <%= link_to "Supprimer", statue_path(@statue),
-                      :class => "btn-show-delete",
-                      :data => {:confirm => "ATTENTION, vous allez supprimer toutes les données de votre statue. Êtes-vous sûr(e) ?",
-                               :method => "delete"} %>
-      </div>
-      </div>
-
-      <div class="show-card col-xs-12 col-lg-6">
-        <div class="title">Découvrez où se cache cette statue :</div>
-        <%= render 'components/map', markers: @markers %>
+    <div><i class="fas fa-heart"></i><%= link_to " JE VEUX LA LOUER !", new_statue_rental_path(@statue),
+                    :class => "btn-reservation" %>
+    </div><br>
+    <div><%= link_to "Retour", statues_path,
+                    :class => "btn-show-options" %>
+          <%= link_to "Éditer", edit_statue_path(@statue),
+                    :class => "btn-show-edit" %>
+          <%= link_to "Supprimer", statue_path(@statue),
+                    :class => "btn-show-delete",
+                    :data => {:confirm => "ATTENTION, vous allez supprimer toutes les données de votre statue. Êtes-vous sûr(e) ?",
+                             :method => "delete"} %>
+    </div>
+    </div>
+    <div class="show-card col-xs-12 col-lg-6">
+      <div class="title">Découvrez où se cache cette statue :</div>
+      <%= render 'components/map', markers: @markers %>
     </div>
   </div>
 </div>
