@@ -13,3 +13,56 @@
   font-size: 70px;
   margin-bottom: 15px;
 }
+
+.friend-logo {
+  margin: auto;
+  float: left;
+  width: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 10%;
+  object-fit: fit;
+  padding: 10px;
+  filter: grayscale(50%);
+  transition: .3s ease-in-out;
+}
+
+.friends-title h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: Alata, sans-serif;
+  color: #6C5480;
+  text-align: left;
+  border-bottom: 1px solid #b7b7b7;
+}
+
+
+.friend-logo:hover {
+  margin: auto;
+  float: left;
+  width: 100%;
+ max-width: 150px;
+  max-height: 150px;
+  border-radius: 10%;
+  object-fit: fit;
+  padding: 10px;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.container-down {
+  margin: 10px auto;
+}
+
+.col-md-12 {
+  align-items: center;
+  justify-content : space-around;
+}
+
+.fa-handshake {
+  font-size: 32px;
+  color: mediumaquamarine;
+  border-radius: 50%;
+  object-fit : fit;
+  padding: 10px;
+}
