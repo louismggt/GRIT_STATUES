@@ -98,7 +98,23 @@ background: linear-gradient(to right, rgba(237,255,249,1) 0%, rgba(251,255,254,1
   border-left-style: solid;
   margin-bottom: 20px;
   margin-top: 80px;
-  width: 55%;
+
+}
+
+.show-card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+background: linear-gradient(to right, rgba(237,255,249,1) 0%, rgba(251,255,254,1) 40%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);  padding: 40px;
+  border-radius: 10px;
+  background-opacity: 0.4;
+  box-shadow: 5px 8px 7px 0px rgba(0,0,0,0.2);
+  position:relative;
+  border-color: mediumaquamarine;
+  border-left-style: solid;
+  margin-bottom: 20px;
+  margin-top: 80px;
+
 }
 
 .show-card ul {
