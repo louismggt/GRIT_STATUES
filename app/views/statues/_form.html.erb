@@ -3,21 +3,48 @@
     <h1> GAGNEZ DE L'ARGENT EN LOUANT VOTRE STATUE !</h1>
 
     <%= simple_form_for @statue do |f| %>
+      <div class="tab first active">
+        <div class="title mb-3">
+          Décrivez-nous votre statue:
+        </div>
+        <%= f.input :name,        label: 'Nom de la statue', placeholder: 'Aphrodite', class: "input"%>
+        <%= f.input :description, placeholder: "Décrivez votre statue en quelques mots. Donnez envie ! 🗿", class: "text-area my-5 text-uppercase" %>
+      </div>
+      <div class="tab d-none second">
+        <div class="title mb-3">
+          Quelques petites infos pour mieux vous référencer :
+        </div>
+        <%= f.input :category, label: 'Catégorie', class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"].sort %>
+        <%= f.input :length,   label: 'Longueur', placeholder: "cm", class: "input" %>
+        <%= f.input :width,    label: 'Largeur', placeholder: "cm",class: "input" %>
+        <%= f.input :height,   label: 'Hauteur', placeholder: "cm",class: "input" %>
+        <%= f.input :material, label: 'Matière', class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"].sort %>
+      </div>
+      <div class="tab d-none step-before-last">
+        <div class="title mb-3">
+          Où la mettez vous à disposition :
+        </div>
+        <%= f.input :location, label: 'Ville', placeholder: "Paris",class: "input" %>
+      </div>
+      <div class="tab d-none">
+        <div class="title mb-3">
+          Votre prix sera le notre!
+        </div>
+        <%= f.input :price,     label: 'Tarif journalier - (nos experts en art vérifieront.)', input_html: { min: '0'}, placeholder: "Make it rain!" %>
+        <p>📸 </p>
+        <%= f.input :photo,     label:"Une photo vaut mieux que 1000 mots!", class: "input-poto" %>
+        <%= f.input :photo_cache, as: :hidden %>
 
-      <%= f.input :name,     label: 'Nom de la statue', placeholder: 'Aphrodite', class: "input"%>
-      <%= f.input :category, label: 'Catégorie', class: "input", collection: ["Bas relief", "Sculpture Equestre", "Buste", "Sculpture monumentale", "Sculpture antique", "Art contemporain", "Art nouveau", "Rococo", "Art baroque", "Nain de jardin", "Décoration de Noël", "Romanesque", "Sculpture sur bois", "Bronze"].sort %>
-      <%= f.input :length,   label: 'Longueur', placeholder: "cm", class: "input" %>
-      <%= f.input :width,    label: 'Largeur', placeholder: "cm",class: "input" %>
-      <%= f.input :height,   label: 'Hauteur', placeholder: "cm",class: "input" %>
-      <%= f.input :surface,  placeholder: "cm",class: "input" %>
-      <%= f.input :location, label: 'Ville', placeholder: "Paris",class: "input" %>
-      <%= f.input :material, label: 'Matière', class: "input", collection: ["Plastique", "Bois", "Bronze", "Acier", "Aluminium", "Papier", "Granit", "Pierre", "Marbre"].sort %>
-      <%= f.input :description, placeholder: "Décrivez votre statue en quelques mots. Donnez envie ! 🗿", class: "text-area my-5 text-uppercase" %>
-      <%= f.input :price,    label: 'Tarif journalier - (nos experts en art vérifieront.)', input_html: { min: '0'}, placeholder: "Make it rain!" %>
-      <p>📸 </p>
-      <%= f.input :photo, label:"Une photo vaut mieux que 1000 mots!", class: "btn btn-ghost" %>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.button :submit, class: "btn-flat" %>
+        <%= f.button :submit, class: "btn-flat" %>
+      </div>
+
+      <div id="buttons" style="overflow:auto;">
+        <div class="buttons_form">
+          <div id="prev-btn" class="btn btn-flat d-none">Previous</div>
+          <div id="next-btn" class="btn btn-flat">Next</div>
+        </div>
+      </div>
+
     <% end %>
     <!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
       <span><strong>Yay!</strong> 🎉 you successfully added a statue.</span>

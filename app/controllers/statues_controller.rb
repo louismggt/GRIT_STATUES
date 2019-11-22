@@ -6,7 +6,7 @@ class StatuesController < ApplicationController
     @markers = [{
       lat: @statue.latitude,
       lng: @statue.longitude,
-      image_url: helpers.asset_url('pin.png')
+      image_url: helpers.asset_url('pin2.png')
     }]
   end
 
@@ -36,7 +36,7 @@ class StatuesController < ApplicationController
   def create
     @statue = Statue.new(statues_params)
     @statue.user = current_user
-    if @statue.save
+    if @statue.save!
       redirect_to statue_path(@statue)
     else
       render :new
