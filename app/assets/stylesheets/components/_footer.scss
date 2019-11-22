@@ -1,9 +1,9 @@
+
 $primary-light-blue: #66CDAA;
 $primary-line-color: #F4F4F4;
 * {
   box-sizing: border-box
 }
-
 ul {
   list-style: none
 }
@@ -11,12 +11,12 @@ a {
   text-decoration: none
 }
 .generic-anchor {
-  color: $primary-light-blue;
+  color: #66CDAA;;
   &:visited {
-    color: $primary-light-blue
+    color: #66CDAA;
   }
   &:hover {
-    color: $primary-line-color
+    color: #66CDAA;
   }
 }
 
