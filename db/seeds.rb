@@ -169,7 +169,7 @@ sculpture_de_julie = Statue.create!(
   length: 5,
   width: 10,
   height: 15,
-  location: "Julouville"
+  location: "Jullouville"
 )
 sculpture_de_julie.remote_photo_url = "https://www.prince-decoration.fr/2964-large_default/statue-erotique-femme-nue-en-resine-le-bisou-15-cm.jpg"
 sculpture_de_julie.save!
