@@ -1,7 +1,5 @@
 const priceUpdate = document.getElementById("range_start");
 const element = document.getElementById("result")
-console.log("toto")
-
 
 if (priceUpdate) {
   priceUpdate.addEventListener("change", event => {
