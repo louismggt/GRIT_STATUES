@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     @review.statue = @statue
     if @review.save
-      redirect_to root_path
+      redirect_to statue_path(@statue)
     else
       flash[:alert] = "Something went wrong."
       render :new
